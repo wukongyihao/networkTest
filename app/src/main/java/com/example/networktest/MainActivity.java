@@ -49,15 +49,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     connection.setReadTimeout(80000);
                     InputStream in = connection.getInputStream();
                         reader = new BufferedReader(new InputStreamReader(in));
-                        Log.d("123123","try to send");
+//                        Log.d("123123","try to send");
                         StringBuilder response = new StringBuilder();
                         String line;
                         while ((line = reader.readLine()) != null){
                             response.append(line);
-                            Log.d("123123","append line");
+//                            Log.d("123123","append line");
                         }
                     showResponse(response.toString());
-                    Log.d("123123","show response");
+//                    Log.d("123123","show response");
                 }catch (Exception e){
                     e.printStackTrace();
                 }finally {
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void run() {
                 responseText.setText(response);
-                Log.d("123123","6385296");
+//                Log.d("123123","6385296");
             }
         });
     }
